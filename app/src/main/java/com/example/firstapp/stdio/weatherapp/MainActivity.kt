@@ -2,6 +2,7 @@ package com.example.firstapp.stdio.weatherapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.TableLayout
 import androidx.viewpager.widget.ViewPager
 import com.example.firstapp.stdio.weatherapp.fragments.FragmentPageAdapter
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         val fragments = Arrays.asList(TodayFragment(), WeekFragment())
         adapter = FragmentPageAdapter(supportFragmentManager, ArrayList(fragments))
         this.viewpager.adapter = adapter
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_activity_menu, menu)
+        return true
 
     }
 }

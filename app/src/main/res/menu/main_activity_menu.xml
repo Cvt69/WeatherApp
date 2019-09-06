@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Metric"
+        android:id="@+id/menu_metric"
+        android:checkable="true">
+
+    </item>
+
+    <item android:title="Imperial"
+        android:id="@+id/menu_imperial"
+        android:checkable="true">
+
+    </item>
+
+</menu>
