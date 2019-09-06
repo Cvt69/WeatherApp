@@ -1,14 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.TodayFragment">
+    tools:context=".fragments.TodayFragment"
+    android:background="#66c5ff">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Today" />
 
-</FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/image_sunny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewForecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Sunny"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:textSize="14sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/textViewWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="2 km/h"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableTop="@drawable/ic_wind_24_px"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="50%"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewWindSpeed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableTop="@drawable/ic_humidity_24_px"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/textViewPrecipitation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="20 mm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewWindSpeed"
+        android:drawableTop="@drawable/ic_water_24_px"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/textViewTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="22"
+        android:textColor="#ffffff"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewForecast" />
+
+    <TextView
+        android:id="@+id/textViewMaxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_max_12_px"
+        android:text="24"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemp" />
+
+    <TextView
+        android:id="@+id/textViewMinTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/ic_min_12_px"
+        android:text="18"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/textViewMaxTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
