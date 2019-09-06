@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mon"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewForecastWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/image_sunny_week"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textViewForecastWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunny"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:layout_weight="1"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textViewMaxTempWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24"
+        android:drawableLeft="@drawable/ic_max_12_px"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/textViewMinTempWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:drawableLeft="@drawable/ic_min_12_px"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:layout_margin="5dp"/>
+</LinearLayout>
