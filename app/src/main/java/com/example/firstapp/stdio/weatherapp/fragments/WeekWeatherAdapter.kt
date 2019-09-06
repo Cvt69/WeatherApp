@@ -8,9 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.stdio.weatherapp.R
 import com.example.firstapp.stdio.weatherapp.model.WeatherModel
-import java.util.ArrayList
+import java.lang.String
+import java.util.List
 
-class WeekWeatherAdapter(private var weatherList: ArrayList<WeatherModel>) :
+class WeekWeatherAdapter(private var weatherList: List<WeatherModel>) :
     RecyclerView.Adapter<WeekWeatherAdapter.WeatherHolder>() {
     override fun onBindViewHolder(holder: WeatherHolder, position: Int) {
         holder.bind(weatherList.get(position))
@@ -45,8 +46,8 @@ class WeekWeatherAdapter(private var weatherList: ArrayList<WeatherModel>) :
         fun bind(model: WeatherModel) {
             textViewTitle.setText(model.title)
             textViewForecastWeek.setText(model.forecast)
-            textViewMaxTempWeek.setText(Integer.valueOf(model.max_temp.toString()))
-            textViewMinTempWeek.setText(Integer.valueOf(model.min_tempo.toString()))
+            textViewMaxTempWeek.setText(String.valueOf(model.max_temp))
+            textViewMinTempWeek.setText(String.valueOf(model.min_tempo))
         }
     }
 
