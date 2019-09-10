@@ -26,11 +26,14 @@ class MainActivity : AppCompatActivity() {
         this.viewpager.adapter = adapter
         tab_layout.setupWithViewPager(viewpager)
 
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_activity_menu, menu)
-        return true
 
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.main_activity_menu, menu)
+//        return true
+//
+//    }
+
+
 }

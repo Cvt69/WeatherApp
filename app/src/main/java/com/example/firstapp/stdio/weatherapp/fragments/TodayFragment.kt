@@ -16,6 +16,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.firstapp.stdio.weatherapp.R
 import com.example.firstapp.stdio.weatherapp.model.WeatherModel
 import com.example.firstapp.stdio.weatherapp.model.WeatherRequest
+import com.example.firstapp.stdio.weatherapp.utils.WeatherUtils
+import kotlinx.android.synthetic.main.fragment_today.*
 import kotlinx.android.synthetic.main.fragment_week.*
 import java.lang.String
 
@@ -70,7 +72,7 @@ class TodayFragment : Fragment() {
         viewTemp.setText(String.valueOf(weather.temp))
         viewMaxTemp.setText(String.valueOf(weather.max_temp))
         viewMinTemp.setText(String.valueOf(weather.min_temp))
-
+        imageView.setImageResource(WeatherUtils.loadWeatherIconToday(weather.forecast))
 
     }
 

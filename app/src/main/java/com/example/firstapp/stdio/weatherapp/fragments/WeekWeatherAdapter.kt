@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.stdio.weatherapp.R
 import com.example.firstapp.stdio.weatherapp.model.WeatherModel
+import com.example.firstapp.stdio.weatherapp.utils.WeatherUtils
 import java.lang.String
 import java.util.List
 
@@ -48,6 +49,7 @@ class WeekWeatherAdapter(private var weatherList: List<WeatherModel>) :
             textViewForecastWeek.setText(model.forecast)
             textViewMaxTempWeek.setText(String.valueOf(model.max_temp))
             textViewMinTempWeek.setText(String.valueOf(model.min_temp))
+            imageViewForecastWeek.setImageResource(WeatherUtils.loadWeatherIcon(model.forecast))
         }
     }
 
