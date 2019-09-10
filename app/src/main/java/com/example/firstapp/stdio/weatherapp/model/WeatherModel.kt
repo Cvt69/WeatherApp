@@ -7,7 +7,7 @@ class WeatherModel(
     var forecast: String,
     var temp: Integer,
     var max_temp: Integer,
-    var min_tempo: Integer,
+    var min_temp: Integer,
     var humidity: Integer,
     var wind_speed: Integer,
     var precipitation: Integer

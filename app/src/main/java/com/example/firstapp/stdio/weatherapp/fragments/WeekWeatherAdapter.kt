@@ -47,7 +47,7 @@ class WeekWeatherAdapter(private var weatherList: List<WeatherModel>) :
             textViewTitle.setText(model.title)
             textViewForecastWeek.setText(model.forecast)
             textViewMaxTempWeek.setText(String.valueOf(model.max_temp))
-            textViewMinTempWeek.setText(String.valueOf(model.min_tempo))
+            textViewMinTempWeek.setText(String.valueOf(model.min_temp))
         }
     }
 
